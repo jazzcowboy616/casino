@@ -1,0 +1,812 @@
+{
+	"info": {
+		"_postman_id": "40ba88d1-14db-4bda-9c21-5d9e0f1cb6a4",
+		"name": "Casino api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5701292"
+	},
+	"item": [
+		{
+			"name": "get player by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyODUzMTYxLCJleHAiOjE3NDI5Mzk1NjF9.Q-DlaT99vtZhlUg-E98xKgZQ3KvcTPKA7L5elYg3VMc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/players/1",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"players",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get player bet summary",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyODUzMTYxLCJleHAiOjE3NDI5Mzk1NjF9.Q-DlaT99vtZhlUg-E98xKgZQ3KvcTPKA7L5elYg3VMc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/players/1/bet_summary",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"players",
+						"1",
+						"bet_summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get game by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyNjI5MjA1LCJleHAiOjE3NDI3MTU2MDV9.rJBt0zu2bxjitpNPKhXdusXr2UDVAt14bLmaiAmGmjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/games/1",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"games",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get round by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyNzIwMTQ3LCJleHAiOjE3NDI4MDY1NDd9.s4eZO40n8T3bOpOFmwCnTnJffjbWhYCw5u_5TH9z9W4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/games/1/rounds/1",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"games",
+						"1",
+						"rounds",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get games",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyNjI5MjA1LCJleHAiOjE3NDI3MTU2MDV9.rJBt0zu2bxjitpNPKhXdusXr2UDVAt14bLmaiAmGmjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/games/search?query=name=21,winRate between 0.4 0.7,minBet>=2,maxBet<=10",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"games",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "name=21,winRate between 0.4 0.7,minBet>=2,maxBet<=10"
+						}
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "create game",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyNjI5MjA1LCJleHAiOjE3NDI3MTU2MDV9.rJBt0zu2bxjitpNPKhXdusXr2UDVAt14bLmaiAmGmjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"21 points\",\n    \"description\":\"who get exact or closest to 21 points wins the game.\",\n    \"winMultiplier\": 2,\n    \"winRate\": 0.67,\n    \"minBet\": 1,\n    \"maxBet\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/games",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"games"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "upload games",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyOTYyNzkyLCJleHAiOjE3NDMwNDkxOTJ9.S0uYVHyedvKhyCUqoNPu9qvNusuONnN9W61LXXoCP04",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Work/java/Workspace/casino/games.xml"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/games/upload",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"games",
+						"upload"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "bet a game",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyNzIwMTQ3LCJleHAiOjE3NDI4MDY1NDd9.s4eZO40n8T3bOpOFmwCnTnJffjbWhYCw5u_5TH9z9W4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"playerId\": 1,\n    \"roundId\":2,\n    \"amount\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/bets",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"bets"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "create game round",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyNzIwMTQ3LCJleHAiOjE3NDI4MDY1NDd9.s4eZO40n8T3bOpOFmwCnTnJffjbWhYCw5u_5TH9z9W4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/games/1/rounds",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"games",
+						"1",
+						"rounds"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "update game",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful PUT request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyNjI5MjA1LCJleHAiOjE3NDI3MTU2MDV9.rJBt0zu2bxjitpNPKhXdusXr2UDVAt14bLmaiAmGmjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"21 points\",\n    \"description\":\"who get exact or closest to 21 points wins the game.\",\n    \"winMultiplier\": 2,\n    \"winRate\": 0.67,\n    \"minBet\": 2,\n    \"maxBet\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/games/1",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"games",
+						"1"
+					]
+				},
+				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "resolve a round",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful PUT request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyNzIwMTQ3LCJleHAiOjE3NDI4MDY1NDd9.s4eZO40n8T3bOpOFmwCnTnJffjbWhYCw5u_5TH9z9W4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/rounds/2",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"rounds",
+						"2"
+					]
+				},
+				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "deposit player balance",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful PUT request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyODUzMTYxLCJleHAiOjE3NDI5Mzk1NjF9.Q-DlaT99vtZhlUg-E98xKgZQ3KvcTPKA7L5elYg3VMc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"21 points\",\n    \"description\":\"who get exact or closest to 21 points wins the game.\",\n    \"winMultiplier\": 2,\n    \"winRate\": 0.67,\n    \"minBet\": 2,\n    \"maxBet\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/players/1/deposit",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"players",
+						"1",
+						"deposit"
+					]
+				},
+				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "search games",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb25lIiwiaWF0IjoxNzQyNjI5MjA1LCJleHAiOjE3NDI3MTU2MDV9.rJBt0zu2bxjitpNPKhXdusXr2UDVAt14bLmaiAmGmjg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/games/search?query=name=21,winRate between 0.4 0.7,minBet>=2,maxBet<=10",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"games",
+						"search"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "name=21,winRate between 0.4 0.7,minBet>=2,maxBet<=10"
+						}
+					]
+				},
+				"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Bob\",\n\t\"username\":\"bob\",\n    \"password\": \"111111\",\n    \"repeatPassword\": \"111111\",\n    \"birthDate\": \"2015-01-01\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful PUT request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"jone\",\n    \"password\": \"111111\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{BASE_URL}}/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+			},
+			"response": []
+		}
+	]
+}
