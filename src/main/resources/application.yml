@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: casino
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${db_host:localhost}:${db_port:5432}/${db_name:casinodb}
+    username: ${db_user:postgres}
+    password: ${db_password:ChangeMe123}
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update  # use update to enable DDL handling
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+security:
+  jwt:
+    secret-key: 3cd79fc2edd89fb57df9a8f36a72ea3873153b5900271ab8c45b4f8a8368d639
+    # 24h in millisecond
+    expiration-time: 86400000
+  api:
+    secret-key: 9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6
+logging:
+  file:
+    name: ./logs/casino.log

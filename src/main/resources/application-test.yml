@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: casino
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: update  # use update to enable DDL handling
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.H2Dialect
+security:
+  jwt:
+    secret-key: 3cd79fc2edd89fb57df9a8f36a72ea3873153b5900271ab8c45b4f8a8368d639
+    # 24h in millisecond
+    expiration-time: 86400000
+  api:
+    secret-key: 9cd79d32edd89fb5a6df9a8f49c0275acf3d873058dd1e6ba3b590a5b4f8a8d6
+logging:
+  file:
+    name: ./logs/casino-dev.log

@@ -1,0 +1,18 @@
+<games>
+    <game>
+        <name>Blackjack</name>
+        <description>Black jack</description>
+        <winRate>0.45</winRate>
+        <winMultiplier>2.0</winMultiplier>
+        <minBet>5.00</minBet>
+        <maxBet>100.00</maxBet>
+    </game>
+    <game>
+        <name>Roulette</name>
+        <description>Roulette game</description>
+        <winRate>0.48</winRate>
+        <winMultiplier>3.0</winMultiplier>
+        <minBet>2.00</minBet>
+        <maxBet>200.00</maxBet>
+    </game>
+</games>
