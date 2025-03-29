@@ -54,7 +54,7 @@ POST /api/bets                          Place a bet for the player in a specific
 ## Get Started
 
 See the guide on getting started with the Casino API
-[**here**](https://github.com/jazzcowboy616/notesapi/blob/master/QuickStarted.md).
+[**here**](https://github.com/jazzcowboy616/casino/blob/main/QuickStarted.md).
 
 ## Test
 
