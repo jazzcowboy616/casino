@@ -111,11 +111,11 @@ public class GameController {
     }
 
     /**
-     * create a new round for a specific game
+     * get a round for a specific game
      * @param id
      */
     @GetMapping("/{id}/rounds/{roundId}")
-    public ResponseEntity<Round> createRound(@PathVariable Long id, @PathVariable Long roundId) {
+    public ResponseEntity<Round> getRound(@PathVariable Long id, @PathVariable Long roundId) {
         Round round = service.getRound(roundId);
         return new ResponseEntity(round, HttpStatus.CREATED);
     }

@@ -38,6 +38,11 @@ public class PlayerController {
         return ResponseEntity.ok(playerDTO);
     }
 
+    /**
+     *  Make a random deposit for a player
+     * @param id
+     * @return
+     */
     @PutMapping("{id}/deposit")
     public ResponseEntity<PlayerDTO> deposit(@PathVariable Long id) {
         Player player = repo.getReferenceById(id);
@@ -51,6 +56,11 @@ public class PlayerController {
         return ResponseEntity.ok(playerDTO);
     }
 
+    /**
+     * Get the bet summary of a specific player
+     * @param id
+     * @return
+     */
     @GetMapping("{id}/bet_summary")
     public ResponseEntity<PlayerBetSummaryDTO> getPlayerBetSummary(@PathVariable Long id) {
         return ResponseEntity.ok(betService.getPlayerBetSummary(id));
